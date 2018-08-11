@@ -1,6 +1,7 @@
 package com.example.srinidhi.temperaturecricket;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.opengl.Visibility;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ public class MainActvity extends AppCompatActivity {
 
     Button btnTempC;
     Button btnTempF;
+    Button btnWeb;
 
 
 
@@ -26,6 +28,7 @@ public class MainActvity extends AppCompatActivity {
 
         btnTempC=findViewById(R.id.btnTempC);
         btnTempF=findViewById(R.id.btnTempF);
+        btnWeb=findViewById(R.id.btnWeb);
 
 
 
@@ -51,6 +54,13 @@ public class MainActvity extends AppCompatActivity {
         });
 
 
+        btnWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.almanac.com/content/predict-temperature-cricket-chirps"));
+                startActivity(intent);
+            }
+        });
 
 
     }
