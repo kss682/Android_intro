@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightPrimary"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".Activity3">
+
+    <TextView
+        android:id="@+id/tvactivity3"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/to_compute_the_temperature_in_celsius_enter_number_of_chirps_per_25_seonds"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/edC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/count"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/temp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/tvResult3"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/tvResult3"
+        android:textStyle="bold|italic" />
+</LinearLayout>

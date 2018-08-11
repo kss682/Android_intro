@@ -1,5 +1,6 @@
 package com.example.srinidhi.temperaturecricket;
 
+import android.content.Intent;
 import android.opengl.Visibility;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,9 +11,10 @@ import android.widget.TextView;
 
 public class MainActvity extends AppCompatActivity {
 
-    EditText etValue;
+
     Button btnTempC;
-    TextView tvResults;
+    Button btnTempF;
+
 
 
 
@@ -21,26 +23,35 @@ public class MainActvity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_actvity);
 
-        etValue=findViewById(R.id.etValue);
-        btnTempC=findViewById(R.id.btntempC);
-        tvResults=findViewById(R.id.tvResults);
 
-        tvResults.setVisibility(View.GONE);
+        btnTempC=findViewById(R.id.btnTempC);
+        btnTempF=findViewById(R.id.btnTempF);
+
+
+
+
+        btnTempF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(MainActvity.this,
+                        com.example.srinidhi.temperaturecricket.Activity2.class);
+                startActivity(intent);
+            }
+        });
+
 
         btnTempC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int chirps=Integer.parseInt(etValue.getText().toString());
-
-                double temp=(chirps/3.0)+4;
-
-
-                tvResults.setText("The approx Temperature is "+temp +"Celsius");
-
-                tvResults.setVisibility(View.VISIBLE);
-
+                Intent intent=new Intent(MainActvity.this,
+                        com.example.srinidhi.temperaturecricket.Activity3.class);
+                startActivity(intent);
             }
         });
+
+
+
 
     }
 
